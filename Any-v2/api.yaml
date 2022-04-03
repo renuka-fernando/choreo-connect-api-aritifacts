@@ -1,0 +1,211 @@
+type: api
+version: v4.1.0
+data:
+  id: afe93c65-e36b-48eb-ac9e-02483a7c1e9b
+  name: Test
+  context: /test
+  version: 1.0.0
+  provider: admin
+  lifeCycleStatus: CREATED
+  responseCachingEnabled: false
+  cacheTimeout: 300
+  hasThumbnail: false
+  isDefaultVersion: false
+  isRevision: false
+  revisionId: 0
+  enableSchemaValidation: false
+  type: HTTP
+  transport:
+   - http
+   - https
+  tags: []
+  policies:
+   - Unlimited
+  authorizationHeader: Authorization
+  securityScheme:
+   - oauth2
+   - oauth_basic_auth_api_key_mandatory
+  visibility: PUBLIC
+  visibleRoles: []
+  visibleTenants: []
+  mediationPolicies: []
+  subscriptionAvailability: CURRENT_TENANT
+  subscriptionAvailableTenants: []
+  additionalProperties: []
+  additionalPropertiesMap: {}
+  accessControl: NONE
+  accessControlRoles: []
+  businessInformation: {}
+  corsConfiguration:
+    corsConfigurationEnabled: false
+    accessControlAllowOrigins:
+     - '*'
+    accessControlAllowCredentials: false
+    accessControlAllowHeaders:
+     - authorization
+     - Access-Control-Allow-Origin
+     - Content-Type
+     - SOAPAction
+     - apikey
+     - Internal-Key
+    accessControlAllowMethods:
+     - GET
+     - PUT
+     - POST
+     - DELETE
+     - PATCH
+     - OPTIONS
+  websubSubscriptionConfiguration:
+    enable: false
+    secret: ""
+    signingAlgorithm: SHA1
+    signatureHeader: x-hub-signature
+  createdTime: "1647415734126"
+  lastUpdatedTime: 2022-03-16 13:02:57.896
+  endpointConfig:
+    endpoint_type: http
+    sandbox_endpoints:
+      url: http://localhost
+    production_endpoints:
+      url: http://localhost
+  endpointImplementationType: ENDPOINT
+  scopes: []
+  operations:
+   -
+    id: ""
+    target: /abc/shop/{shopId}/pets/{petId}.pets
+    verb: GET
+    authType: Application & Application User
+    throttlingPolicy: Unlimited
+    scopes: []
+    usedProductIds: []
+    operationPolicies:
+      request:
+      #  -
+      #   policyName: addQueryParam
+      #   policyVersion: v1
+      #   policyId: a38425d7-be3f-408d-9172-9a1414a95001
+      #   parameters:
+      #     paramKey: qKey
+      #     paramValue: qVal
+      #  -
+      #   policyName: addQueryParam
+      #   policyVersion: v1
+      #   policyId: a38425d7-be3f-408d-9172-9a1414a95001
+      #   parameters:
+      #     paramKey: qKey2
+      #     paramValue: qVal2
+       -
+        policyName: ccAddHeader
+        policyVersion: v1
+        policyId: 5d31108d-49ef-4ae5-a4bb-d3fab6d735b9
+        parameters:
+          headerName: hKey
+          headerValue: hVal
+      #  -
+      #   policyName: ccCallInterceptorService
+      #   policyVersion: v1
+      #   policyId: 749f6393-b59d-43fb-9cca-f4c850dea27b
+      #   parameters:
+      #     interceptorServiceURL: http://interceptor
+      #     includes: "request_headers,request_body"
+       -
+        policyName: ccChangeHTTPMethod
+        policyVersion: v1
+        policyId: 671d1558-cb6a-406e-8414-5373c3f8f052
+        parameters:
+          currentMethod: GET
+          updatedMethod: PUT
+      #  -
+      #   policyName: ccRemoveHeader
+      #   policyVersion: v1
+      #   policyId: 0407e1ec-7245-4947-b914-3ccba61a4249
+      #   parameters:
+      #     headerName: removeH
+      #  -
+      #   policyName: opaPolicy
+      #   policyVersion: v1
+      #   policyId: 89679b33-8c93-4682-94f9-d0291c159052
+      #   parameters:
+      #     serverUrl: http://host.docker.internal:8181/v1/data
+      #     policy: mypolicy
+      #     rule: allow
+      #     sendAccessToken: false
+      #     maxOpenConnections: "500"
+      #     maxPerRoute: "200"
+       -
+        policyName: rewriteResourcePath
+        policyVersion: v1
+        policyId: 8810ef0c-1e2e-4074-a769-f5bf9c8681c8
+        parameters:
+          # newResourcePath: /abc-shops/shops/{uri.var.shopId}/pets/{uri.var.petId}
+          newResourcePath: /abc-shops/pets/{uri.var.petId}.foo/shops/{uri.var.shopId}
+          includeQueryParams: false
+      response: []
+      #  -
+      #   policyName: ccCallInterceptorService
+      #   policyVersion: v1
+      #   policyId: 749f6393-b59d-43fb-9cca-f4c850dea27b
+      #   parameters:
+      #     interceptorServiceURL: http://interceptorResponse
+      #     includes: "request_headers,request_body"
+      fault: []
+   -
+    id: ""
+    target: /abc/shop/{shopId}/pets/{petId}
+    verb: PUT
+    authType: Application & Application User
+    throttlingPolicy: Unlimited
+    scopes: []
+    usedProductIds: []
+    operationPolicies:
+      request: []
+      response: []
+      fault: []
+   -
+    id: ""
+    target: /abc/shop/{shopId}/pets/{petId}
+    verb: POST
+    authType: Application & Application User
+    throttlingPolicy: Unlimited
+    scopes: []
+    usedProductIds: []
+    operationPolicies:
+      request: []
+      response: []
+      fault: []
+   -
+    id: ""
+    target: /abc/shop/{shopId}/pets/{petId}
+    verb: DELETE
+    authType: Application & Application User
+    throttlingPolicy: Unlimited
+    scopes: []
+    usedProductIds: []
+    operationPolicies:
+      request: []
+      response: []
+      fault: []
+   -
+    id: ""
+    target: /abc/shop/{shopId}/pets/{petId}
+    verb: PATCH
+    authType: Application & Application User
+    throttlingPolicy: Unlimited
+    scopes: []
+    usedProductIds: []
+    operationPolicies:
+      request: []
+      response: []
+      fault: []
+  categories: []
+  keyManagers:
+   - all
+  advertiseInfo:
+    advertised: false
+    apiOwner: admin
+    vendor: WSO2
+  gatewayVendor: wso2
+  gatewayType: wso2/choreo-connect
+  asyncTransportProtocols: []
+  organizationId: carbon.super
