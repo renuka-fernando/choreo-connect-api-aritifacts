@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Any
-  version: 2.0.0
+  version: v2
 servers:
  -
   url: /
@@ -13,7 +13,7 @@ security:
 #   includes:
 #     - invocation_context
 paths:
-  /abc/shop/{shopId}/pets/{petId}.pets:
+  /abcd/shop/{shopId}/pets/{petId}.pets:
     get:
       responses:
         "200":

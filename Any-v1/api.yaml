@@ -2,9 +2,9 @@ type: api
 version: v4.1.0
 data:
   id: afe93c65-e36b-48eb-ac9e-02483a7c1e9b
-  name: AnyV1
+  name: Any
   context: /any/v1
-  version: 1.0.0
+  version: v1
   provider: admin
   lifeCycleStatus: CREATED
   responseCachingEnabled: false
