@@ -8,10 +8,10 @@ servers:
 security:
  -
   default: []
-x-wso2-request-interceptor:
-  serviceURL: https://invalid-host-this-should-be-overriden-from-api-policy:8080
-  includes:
-    - invocation_context
+# x-wso2-request-interceptor:
+#   serviceURL: https://invalid-host-this-should-be-overriden-from-api-policy:8080
+#   includes:
+#     - invocation_context
 paths:
   /abc/shop/{shopId}/pets/{petId}.pets:
     get:
