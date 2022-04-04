@@ -13,7 +13,7 @@ security:
 #   includes:
 #     - invocation_context
 paths:
-  /abcd/shop/{shopId}/pets/{petId}.pets:
+  /abcde/shop/{shopId}/pets/{petId}.pets:
     get:
       responses:
         "200":

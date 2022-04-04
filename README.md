@@ -53,7 +53,7 @@ curl -X 'GET' 'https://localhost:9095/any/v1/abc/shop/shp123/pets/pt123.pets' -H
 ### Any v2
 
 ```sh
-curl -X 'GET' 'https://localhost:9095/any/v2/abcd/shop/shp123/pets/pt123.pets' -H "Authorization: Bearer $TOKEN"
+curl -X 'GET' 'https://localhost:9095/any/v2/abcde/shop/shp123/pets/pt123.pets' -H "Authorization: Bearer $TOKEN"
 ```
 
 ```json

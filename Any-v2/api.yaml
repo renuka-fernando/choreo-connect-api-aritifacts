@@ -73,7 +73,7 @@ data:
   operations:
    -
     id: ""
-    target: /abcd/shop/{shopId}/pets/{petId}.pets
+    target: /abcde/shop/{shopId}/pets/{petId}.pets
     verb: GET
     authType: Application & Application User
     throttlingPolicy: Unlimited
